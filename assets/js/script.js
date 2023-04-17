@@ -22,6 +22,7 @@ let username1totalamount = 0;
 let username2totalamount = 0;
 let payer;    
 let amount;
+let details;
 let username1;
 let username2;
 
@@ -81,9 +82,10 @@ function Addexpense () {
     optionUsername2.value = `${username2}`;
     optionUsername2.innerText = `${username2}`;
 
-    // make initially amount input field empty and get focus on it after refreshing page
+    // make initially amount and details input field empty and get focus on detail input field 
     document.getElementById('amount').value = "";
-    document.getElementById('amount').focus();
+    document.getElementById('details').value = "";
+    document.getElementById('details').focus();
 }
 
 modalClose2.addEventListener('click', function(){
@@ -98,17 +100,20 @@ function expenseDetailsHandleSubmit(event) {
     // Get the two input elements
     payer = document.getElementById('payer-name').value;
     amount = parseFloat(document.getElementById('amount').value);
+    details = document.getElementById('details').value;
         
-    if (!isNaN(amount) && amount !== 0){
+    if (!isNaN(amount) && amount !== 0 && !(details === '')){
         expenseRecord(); 
         let resultDiv = document.getElementById('result-div');
         resultDiv.style.visibility = "visible";
-        
+        balanceCalculation(); 
+    } else if ((details === '')){
+    alert('Please give reason for the payment!');
     } else {
-    alert('Please give correct amount!');
-    }    
+        alert('Please give correct amount!');
+    }
 
-    balanceCalculation(); 
+    //balanceCalculation(); 
 }
 
 
@@ -123,7 +128,7 @@ function expenseRecord() {
         expenseList.setAttribute('id','expenselistusername2');
     }
 
-    let expenseListHTML = `<p> ${payer} paid $${amount} <br><span><font face="arial" font size="2.5" color="#016FB9">${new Date()} </font> </span></p> <hr>`;
+    let expenseListHTML = `<p> ${payer} paid $${amount} <br> <font face="Montserrat Alternates" font size="4" color="black"> ${details} </font> <br> <span><font face="arial" font size="2.5" color="#016FB9">${new Date()} </font> </span></p> <hr>`;
 
     expenseList.innerHTML= expenseListHTML;
     
@@ -134,6 +139,10 @@ function expenseRecord() {
 
 function balanceCalculation() {  
 
+    payerPaidAmount();
+    balanceStatement(); 
+    modalBg2.classList.remove('bg-active-2');  
+/*
     if (!isNaN(amount) && amount !== 0){
         payerPaidAmount();
         balanceStatement(); 
@@ -141,7 +150,7 @@ function balanceCalculation() {
     } else {
     alert('Please give correct amount!');
     }  
-    
+*/
 }
 
 function payerPaidAmount() {
