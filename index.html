@@ -32,12 +32,12 @@
             <form id="user-details">
                 <h3>Please Enter Your Data</h3>
                 <div>
-                <label for="your-name">Your Name:</label>
+                <label for="username1">Your Name:</label>
                 <br>
                 <input type="text" name="your-name" id="username1" pattern="[A-Za-z]+" title="Name without special characters/numbers">
                 </div>
                 <div>
-                <label for="friend-name">Friend's Name:</label>
+                <label for="username2">Friend's Name:</label>
                 <br>
                 <input type="text" name="friend-name" id="username2" pattern="[A-Za-z]+" title="Name without special characters/numbers">
                 </div>
@@ -49,11 +49,13 @@
 
     <div class="modal-bg-1">
         <div class="modal-1">
-            <h3>How does it work?</h3>
-            <p>This website offers you a tool to add all your joint expenses of your friends, roommates and relatives, which will give you the balance sheet showing who owes whom and how much.</p>
-            <p>To begin adding the expenses, click "Let's Start!" Button. Include your name and the name of the person you are sharing the expenses with. Attention: Numbers and special characters are not allowed! Click Submit to continue. Now you will see the "Add" button. Click this button to add your first expense. Choose the name of the payer and the amount he/she paid. Click Submit to make an entry. Repeat the steps to add expenses as many times as you want to add the expenses. </p>
-            <p>At the bottom of the page the bank statement with the debtor and the amount is displayed.</p>
-            <span class="modal-close-1">X</span>
+            <div id="more-info">
+                <h3>How does it work?</h3>
+                <p>This website offers you a tool to add all your joint expenses of your friends, roommates and relatives, which will give you the balance sheet showing who owes whom and how much.</p>
+                <p>To begin adding the expenses, click "Let's Start!" Button. Include your name and the name of the person you are sharing the expenses with. Attention: Numbers and special characters are not allowed! Click Submit to continue. Now you will see the "Add" button. Click this button to add your first expense. Choose the name of the payer and the amount he/she paid. Click Submit to make an entry. Repeat the steps to add expenses as many times as you want to add the expenses. </p>
+                <p>At the bottom of the page the bank statement with the debtor and the amount is displayed.</p>
+                <span class="modal-close-1">X</span>
+            </div>
         </div>
     </div>
     
@@ -74,9 +76,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
                 </tbody>
             </table>
         </div>
@@ -87,7 +89,7 @@
             <form id="expense-details">
                 <h3>Please Enter Expense Details</h3>
                 <label for="payer">Who Paid:</label>
-                <select name="payer" id="payer-name"">
+                <select name="payer" id="payer-name">
                     <option value="username1" id="option-username1">User1</option>
                     <option value="username2" id="option-username2">User2</option>
                 </select>

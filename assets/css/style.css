@@ -176,9 +176,30 @@ tbody{
 }
 
 #user-details{
-    
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.details{
+    font-family: Montserrat, sans-serif;
+    font-size: 70%;
+    color: black;
+}
+
+.timestamp{
+    font-family: Arial, sans-serif;
+    font-size: 30%;
+    color: #016FB9;
+}
+
+#more-info{
+    width: 100%;
+    height: 100%;
+    font-size: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -244,6 +265,10 @@ footer{
         
     }
 
+    #more-info{
+        font-size: 60%;
+    }
+
 }
 
 
@@ -290,6 +315,10 @@ footer{
     #expense-div-active {
         font-size: 15px;
     }
+
+    #more-info{
+        font-size: 50%;
+    }
 }
 
 @media only screen and (max-width: 200px) {
@@ -308,5 +337,9 @@ footer{
 
     #result-table {
         font-size: 7px;
+    }
+
+    #more-info{    
+        font-size: 40%;
     }
 }

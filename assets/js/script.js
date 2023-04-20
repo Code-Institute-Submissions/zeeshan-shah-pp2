@@ -128,7 +128,7 @@ function expenseRecord() {
         expenseList.setAttribute('id','expenselistusername2');
     }
 
-    let expenseListHTML = `<p> ${payer} paid $${amount} <br> <font face="Montserrat Alternates" font size="4" color="black"> ${details} </font> <br> <span><font face="arial" font size="2.5" color="#016FB9">${new Date()} </font> </span></p> <hr>`;
+    let expenseListHTML = `<p> ${payer} paid $${amount} <br> <span class="details"> ${details}</span>  <br> <span class="timestamp">${new Date()} </span></p> <hr>`;
 
     expenseList.innerHTML= expenseListHTML;
     
