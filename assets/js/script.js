@@ -16,17 +16,19 @@ let modalClose2 = document.getElementsByClassName('modal-close-2')[0];
 let expenseDetails = document.getElementById('expense-details');
 expenseDetails.addEventListener('submit', expenseDetailsHandleSubmit);
 // declaring and/or assigning initial values 
-let username1amountList = [];
-let username2amountList =[];
-let username1totalamount = 0;
-let username2totalamount = 0;
+let username1AmountList = [];
+let username2AmountList =[];
+let username1TotalAmount = 0;
+let username2TotalAmount = 0;
 let payer;    
 let amount;
 let details;
 let username1;
 let username2;
 
-
+/**
+ * This function receives/saves the usernames, remove the welcome message and call the addexpense function
+ */
 function userDetailsHandleSubmit(event) {
     // Prevent the default submit action 
     event.preventDefault();
@@ -44,6 +46,9 @@ function userDetailsHandleSubmit(event) {
     }
 }
 
+/**
+ * Display the username form 
+ */
 function funtionStart () {
     modalBg.classList.add('bg-active'); // user data form gets visible
     
@@ -56,6 +61,9 @@ modalClose.addEventListener('click', function(){
     modalBg.classList.remove('bg-active'); // back to welcome page
 });
 
+/**
+ * Display information window: How to use this website
+ */
 function infoWindow () {
     modalBg1.classList.add('bg-active-1'); 
 }
@@ -64,18 +72,24 @@ modalClose1.addEventListener('click', function(){
     modalBg1.classList.remove('bg-active-1'); // back to addExpenseDiv page if user clicks on close sign
 });
 
+/**
+ * Display the add expense message
+ */
 function addExpenseDiv(){
     welcome.remove();
     let expenseDiv = document.getElementById('expense-div');
     expenseDiv.setAttribute('id', 'expense-div-active'); // make the div visible
 }
 
+/**
+ * Display expense form: Payer selection, payment reason and the amount input fields
+ */
 function Addexpense () {
     modalBg2.classList.add('bg-active-2'); // payer and paid amount form
 
     // dropdown options
     let optionUsername1 = document.getElementById('option-username1');
-    optionUsername1.value = ('value',`${username1}`);
+    optionUsername1.value = `${username1}`;
     optionUsername1.innerText = `${username1}`;
 
     let optionUsername2 = document.getElementById('option-username2');
@@ -93,6 +107,9 @@ modalClose2.addEventListener('click', function(){
 });
 
 
+/**
+ * Check if payment reason and amount fields are not empty or invalid. Call expenseRecord function and balanceCalculation funtion
+ */
 function expenseDetailsHandleSubmit(event) {
     // Prevent the default submit action
     event.preventDefault();
@@ -113,10 +130,11 @@ function expenseDetailsHandleSubmit(event) {
         alert('Please give correct amount!');
     }
 
-    //balanceCalculation(); 
 }
 
-
+/**
+ * Make expense record and display it on the screen
+ */
 function expenseRecord() {
 
     const d = new Date();
@@ -137,50 +155,50 @@ function expenseRecord() {
     expenseDetailsDiv.appendChild(expenseList);
 }
 
+/**
+ * Calls the functions: payerPaidAmount and balanceStatement
+ */
 function balanceCalculation() {  
 
     payerPaidAmount();
     balanceStatement(); 
     modalBg2.classList.remove('bg-active-2');  
-/*
-    if (!isNaN(amount) && amount !== 0){
-        payerPaidAmount();
-        balanceStatement(); 
-        modalBg2.classList.remove('bg-active-2');         
-    } else {
-    alert('Please give correct amount!');
-    }  
-*/
 }
 
+/**
+ * Calculates the total amount paid by the payer
+ */
 function payerPaidAmount() {
 
     if (payer === username1){
-        username1amountList.push(amount);
-        username1totalamount = username1amountList.reduce((a, b) => {
+        username1AmountList.push(amount);
+        username1TotalAmount = username1AmountList.reduce((a, b) => {
             return a + b;
         },0);
     } else{
-        username2amountList.push(amount);
-        username2totalamount = username2amountList.reduce((a, b) => {
+        username2AmountList.push(amount);
+        username2TotalAmount = username2AmountList.reduce((a, b) => {
             return a + b;
         },0);
     }
 }
 
+/**
+ * Checks who owes the money and calculates the amount owed
+ */
 function balanceStatement() {
 
     let table = document.getElementById('result-table');
 
-    if (username1totalamount > username2totalamount){
-        let amountdiff = ((username1totalamount - username2totalamount)/2).toFixed(2);
+    if (username1TotalAmount > username2TotalAmount){
+        let amountdiff = ((username1TotalAmount - username2TotalAmount)/2).toFixed(2);
         let tbodycell = table.getElementsByTagName('tbody')[0].rows[0].cells;
         tbodycell[0].innerHTML = `${username2}`;   
         tbodycell[1].innerHTML = `owes`;   
         tbodycell[2].innerHTML = `$${amountdiff}`;  
        
-    } else if (username1totalamount < username2totalamount){
-        let amountdiff = ((username2totalamount - username1totalamount)/2).toFixed(2);
+    } else if (username1TotalAmount < username2TotalAmount){
+        let amountdiff = ((username2TotalAmount - username1TotalAmount)/2).toFixed(2);
         let tbodycell = table.getElementsByTagName('tbody')[0].rows[0].cells;
         tbodycell[0].innerHTML = `${username1}`;   
         tbodycell[1].innerHTML = `owes`;   

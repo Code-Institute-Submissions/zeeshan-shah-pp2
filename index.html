@@ -4,119 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tool to track the joint expense and calculate the balance">
+    <meta name="keywords" content="joint expenses, sharepal, divide expenses">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/logo-icon.webp">
+
     <title>SharePal</title>
 </head>
 <body>
-    <div id="logo-section">
-        <h1>
-            <img src="assets/images/logo-icon.webp" alt="logo icon" id="logo-icon">
-            SharePal
-        </h1>
-    </div>
-
-    <div id="welcome">
-        <h2>
-            Welcome to SharePal!
-        </h2>
-        <p>
-            SharePal is a tool to track all your shared expenses among friends and relatives.
-        </p>
-        <button class="btn-start">Let's Start!</button>
-        <button class="info-button">More Info</button>
-    </div>
-
-    <div class="modal-bg">
-        <div class="modal">
-            <form id="user-details">
-                <h3>Please Enter Your Data</h3>
-                <div>
-                <label for="username1">Your Name:</label>
-                <br>
-                <input type="text" name="your-name" id="username1" pattern="[A-Za-z]+" title="Name without special characters/numbers">
-                </div>
-                <div>
-                <label for="username2">Friend's Name:</label>
-                <br>
-                <input type="text" name="friend-name" id="username2" pattern="[A-Za-z]+" title="Name without special characters/numbers">
-                </div>
-                <button>Submit</button>
-                <span class="modal-close">X</span>
-            </form>
+    <header>
+        <div id="logo-section">
+            <h1>
+                <img src="assets/images/logo-icon.webp" alt="logo icon" id="logo-icon">
+                SharePal
+            </h1>
         </div>
-    </div>
+    </header>
 
-    <div class="modal-bg-1">
-        <div class="modal-1">
-            <div id="more-info">
-                <h3>How does it work?</h3>
-                <p>This website offers you a tool to add all your joint expenses of your friends, roommates and relatives, which will give you the balance sheet showing who owes whom and how much.</p>
-                <p>To begin adding the expenses, click "Let's Start!" Button. Include your name and the name of the person you are sharing the expenses with. Attention: Numbers and special characters are not allowed! Click Submit to continue. Now you will see the "Add" button. Click this button to add your first expense. Choose the name of the payer and the amount he/she paid. Click Submit to make an entry. Repeat the steps to add expenses as many times as you want to add the expenses. </p>
-                <p>At the bottom of the page the bank statement with the debtor and the amount is displayed.</p>
-                <span class="modal-close-1">X</span>
+    <section>
+        <div id="welcome">
+            <h2>
+                Welcome to SharePal!
+            </h2>
+            <p>
+                SharePal is a tool to track all your shared expenses among friends and relatives.
+            </p>
+            <button class="btn-start">Let's Start!</button>
+            <button class="info-button">More Info</button>
+        </div>
+
+        <!-- username form-->
+        <div class="modal-bg">
+            <div class="modal">
+                <form id="user-details">
+                    <h3>Please Enter Your Data</h3>
+                    <div>
+                    <label for="username1">Your Name:</label>
+                    <br>
+                    <input type="text" name="your-name" id="username1" pattern="[A-Za-z]+" title="Name without special characters/numbers">
+                    </div>
+                    <div>
+                    <label for="username2">Friend's Name:</label>
+                    <br>
+                    <input type="text" name="friend-name" id="username2" pattern="[A-Za-z]+" title="Name without special characters/numbers">
+                    </div>
+                    <button>Submit</button>
+                    <span class="modal-close">X</span>
+                </form>
             </div>
         </div>
-    </div>
-    
-    <div id="expense-div">
-        <h2> Let's start adding your expenses:</h2>
-        <button class="addexpensebutton">
-            <img src="assets/images/plus.webp" alt="add icon" id="addicon">
-        </button>
-        <div id="expense-details-div">
-        </div>
-        <div id="result-div">
-            <table id="result-table">
-                <thead>
-                    <tr>
-                        <td>Who</td>
-                        <td>Owes</td>
-                        <td>What?</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>placeholder</td>
-                        <td>placeholder</td>
-                        <td>placeholder</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 
-    <div class="modal-bg-2">
-        <div class="modal-2">
-            <form id="expense-details">
-                <h3>Please Enter Expense Details</h3>
-                <label for="payer-name">Who Paid:</label>
-                <select name="payer" id="payer-name">
-                    <option value="username1" id="option-username1">User1</option>
-                    <option value="username2" id="option-username2">User2</option>
-                </select>
-                <div>
-                <label for="details">Give Details:</label>
-                <br>
-                <input type="text" name="details" id="details">
+        <!-- More Info Window: How does this application work-->
+        <div class="modal-bg-1">
+            <div class="modal-1">
+                <div id="more-info">
+                    <h3>How does it work?</h3>
+                    <p>This website offers you a tool to add all your joint expenses of your friends, roommates and relatives, which will give you the balance sheet showing who owes whom and how much.</p>
+                    <p>To begin adding the expenses, click "Let's Start!" Button. Include your name and the name of the person you are sharing the expenses with. Attention: Numbers and special characters are not allowed! Click Submit to continue. Now you will see the "Add" button. Click this button to add your first expense. Choose the name of the payer and the amount he/she paid. Click Submit to make an entry. Repeat the steps to add expenses as many times as you want to add the expenses. </p>
+                    <p>At the bottom of the page the bank statement with the debtor and the amount is displayed.</p>
+                    <span class="modal-close-1">X</span>
                 </div>
-                <div>
-                <label for="amount">How much($):</label>
-                <br>
-                <input type="number" min="0" name="amount" id="amount" step="any">
-                </div>
-                <button>Submit</button>
-                <span class="modal-close-2">X</span>
-            </form>
+            </div>
         </div>
-    </div>
-
-    <footer>
-        <div>
-            <p>This website is only for educational purpose!</p>
+        
+        <!-- Add Icon and Balance Statement-->
+        <div id="expense-div">
+            <h2> Let's start adding your expenses:</h2>
+            <button class="addexpensebutton">
+                <img src="assets/images/plus.webp" alt="add icon" id="addicon">
+            </button>
+            <div id="expense-details-div">
+            </div>
+            <div id="result-div">
+                <table id="result-table">
+                    <thead>
+                        <tr>
+                            <td>Who</td>
+                            <td>Owes</td>
+                            <td>What?</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>placeholder</td>
+                            <td>placeholder</td>
+                            <td>placeholder</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </footer>
 
-    <script src="assets/js/script.js"></script>
+        <!-- Expense detail form-->
+        <div class="modal-bg-2">
+            <div class="modal-2">
+                <form id="expense-details">
+                    <h3>Please Enter Expense Details</h3>
+                    <label for="payer-name">Who Paid:</label>
+                    <select name="payer" id="payer-name">
+                        <option value="username1" id="option-username1">User1</option>
+                        <option value="username2" id="option-username2">User2</option>
+                    </select>
+                    <div>
+                    <label for="details">Give Details:</label>
+                    <br>
+                    <input type="text" name="details" id="details">
+                    </div>
+                    <div>
+                    <label for="amount">How much($):</label>
+                    <br>
+                    <input type="number" min="0" name="amount" id="amount" step="any">
+                    </div>
+                    <button>Submit</button>
+                    <span class="modal-close-2">X</span>
+                </form>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div>
+                <p>This website is only for educational purpose!</p>
+            </div>
+        </footer>
+
+        <script src="assets/js/script.js"></script>
+    </section>
 </body>
 </html>
