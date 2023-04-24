@@ -318,6 +318,10 @@ footer{
     #more-info{
         font-size: 50%;
     }
+    
+    .timestamp{
+        font-size: 50%;
+    }
 }
 
 /* For screens size from 200px wide and down */
@@ -343,4 +347,5 @@ footer{
     #more-info{    
         font-size: 40%;
     }
+
 }
