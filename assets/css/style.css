@@ -170,6 +170,7 @@ tbody{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    padding: 15px;
 }
 
 #user-details{
