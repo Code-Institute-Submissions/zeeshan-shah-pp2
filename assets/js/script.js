@@ -59,7 +59,6 @@ function funtionStart () {
     document.getElementById('username1').focus();
 }
 
-
 modalClose.addEventListener('click', function(){
     modalBg.classList.remove('bg-active'); // back to welcome page
 });
@@ -111,7 +110,6 @@ function Addexpense () {
 modalClose2.addEventListener('click', function(){
     modalBg2.classList.remove('bg-active-2'); // back to addExpenseDiv page if user clicks on close sign
 });
-
 
 /**
  * Check if payment reason and amount fields are not empty or invalid. Call expenseRecord function and balanceCalculation funtion
