@@ -131,7 +131,7 @@ function expenseDetailsHandleSubmit(event) {
         resultDiv.style.visibility = "visible";
         balanceCalculation(); 
     } else if ((details === '')){
-    alert('Please give reason for the payment!');
+        alert('Please give reason for the payment!');
     } else {
         alert('Please give correct amount!');
     }
