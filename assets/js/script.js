@@ -30,6 +30,7 @@ let username2;
  * This function receives/saves the usernames, remove the welcome message and call the addexpense function
  */
 function userDetailsHandleSubmit(event) {
+    
     // Prevent the default submit action 
     event.preventDefault();
 
@@ -39,10 +40,11 @@ function userDetailsHandleSubmit(event) {
     
     // Condition to check if inputs are not empty
     if (!(username1 === '' || username2 === '')) {
-    modalBg.classList.remove('bg-active'); // hide welcome page
-    addExpenseDiv(); // call addExpenseDiv function 
+
+        modalBg.classList.remove('bg-active'); // hide welcome page
+        addExpenseDiv(); // call addExpenseDiv function 
     } else {
-    alert('Please enter your data!');
+        alert('Please enter your data!');
     }
 }
 
@@ -50,6 +52,7 @@ function userDetailsHandleSubmit(event) {
  * Display the username form 
  */
 function funtionStart () {
+
     modalBg.classList.add('bg-active'); // user data form gets visible
     
     // focus on your name(username1) input field
@@ -65,10 +68,12 @@ modalClose.addEventListener('click', function(){
  * Display information window: How to use this website
  */
 function infoWindow () {
+
     modalBg1.classList.add('bg-active-1'); 
 }
 
 modalClose1.addEventListener('click', function(){
+
     modalBg1.classList.remove('bg-active-1'); // back to addExpenseDiv page if user clicks on close sign
 });
 
@@ -76,6 +81,7 @@ modalClose1.addEventListener('click', function(){
  * Display the add expense message
  */
 function addExpenseDiv(){
+
     welcome.remove();
     let expenseDiv = document.getElementById('expense-div');
     expenseDiv.setAttribute('id', 'expense-div-active'); // make the div visible
