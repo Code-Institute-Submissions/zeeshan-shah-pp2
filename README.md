@@ -189,7 +189,9 @@ The development of this project started with a thought process and some rough sk
 
 * Sketch of the website:
 
-![Sketch](assets/images/sharepal-sketch.png)
+![Sketch 1](assets/images/sharepal-sketch-1.png)
+![Sketch 2](assets/images/sharepal-sketch-2.png)
+![Sketch 3](assets/images/sharepal-sketch-3.png)
 
 #### Deployment
 
