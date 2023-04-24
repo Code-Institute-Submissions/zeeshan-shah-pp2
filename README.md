@@ -3,7 +3,7 @@
 
 ![How responsive is my website on different devices?](assets/images/am-i-responsive.png)
 
-This project is one of my five portfolio projects. This project is based on HTML, CSS and Javascript. The project is made with two friends or roommates in mind who often fund joint expenses and want an equal share of it at the end of the month. This project offers its users to add two usernames/payers, the reason for the payment and the amount. As each expense is added, the final balance is displayed, detailing who owes how much money.
+This project is one of my five portfolio projects. This project is based on HTML, CSS and JavaScript. The project is made with two friends or roommates in mind who often fund joint expenses and want an equal share of it at the end of the month. This project offers its users to add two usernames/payers, the reason for the payment and the amount. As each expense is added, the final balance is displayed, detailing who owes how much money.
 
 A live version of the project can be found here:
 [Project 2](https://zeeshan-shah.github.io/pp2/)
@@ -31,7 +31,7 @@ A live version of the project can be found here:
         + [HTML Validation](#html-validation)
         + [CSS Validation](#css-validation)
     - [Lighthouse](#lighthouse)
-        + [Lighthouse Test - Index Page](#lighthouse-test)
+        + [Lighthouse Test](#lighthouse-test)
 * [Development and Deployment](#development-and-deployment)
     - [Development](#development)
     - [Deployment](#deployment)
@@ -161,9 +161,17 @@ I ensure through chrome development tool that my website is responsive on a vari
 
 [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzeeshan-shah.github.io%2Fpp2%2F)
 
+![HTML Validator](assets/images/html-validation.png)
+
 #### CSS Validation
 
 [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzeeshan-shah.github.io%2Fpp2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![CSS Validator](assets/images/css-validation.png)
+
+#### JavaScript Validation
+
+No major errors were found in the JavaScript.
 
 ### Lighthouse
 
@@ -206,8 +214,8 @@ The procedure for deployment followed the "Creating your site" steps provided in
     - [Icons](https://www.flaticon.com/search/2?word=menu&color=color)
 
 * The keywords were taken from the following sources.
-    - [Twin Word](https://www.twinword.com/ideas/suggest/ice+cream/)
-    - [SEO Explorer](https://seo-explorer.io/relatedkeywords/ice%20cream/)
+    - [Twin Word](https://www.twinword.com/ideas)
+    - [SEO Explorer](https://seo-explorer.io)
 
 ### Acknowledgments
 
@@ -236,10 +244,3 @@ The top screenshot in this ReadMe was created with:
 Best regards,
 
 [SharePal](https://zeeshan-shah.github.io/pp2/)
-
-
-
-
-
-
-
