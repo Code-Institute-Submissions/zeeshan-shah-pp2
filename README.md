@@ -102,36 +102,62 @@ The Header contains a logo and a heading.
 
 The main section consists of small sections. It contains all the important functions of the website. It shows the welcome message, the "Let's Start" button, which allows users to enter their name. After submitting their details, this will take you to the screen that mentions adding their expenses and an "Add" button. By clicking the "Add" button, they can easily add the details of the expense and the amount paid. Each expense added calculates the other person's share and states who owes how much at the bottom of the page.
 
-Welcome text is displayed
+Welcome text is displayed.
+
 ![Welcome Text](assets/images/welcome-message.png)
+
 Let's Start button allows user to start the entering user data. 
+
 ![Let's Start](assets/images/letsstart-button.png)
 
 Username window contain window with input field to enter usernames.
+
 ![Usernames Details](assets/images/usernames-window.png)
+
 If any username input is left blank and submitted, a warning will be displayed.
+
 ![Username Alert](assets/images/username-alert.png)
+
 The "More Information" button gives a brief overview of the functionality of the website.
 
 ![More Info](assets/images/moreinfo-button.png)
 
 The window contains a brief guide on how to use this application.
+
 ![More Detials](assets/images/moreinfo-window.png)
+
 Add expense text is displayed.
+
 ![Add Expense Text](assets/images/addexpense-message.png)
+
 The usernames entered in the previous step will be displayed here as a selection down to select the payer. User will be asked to add payment details(reason for the payment) and the amount paid.
+
 ![Expense Window](assets/images/expensedetails-window.png)
+
 If the user submitted the form without the payment details, a warning will be displayed.
+
 ![Payment Detail Alert](assets/images/paymentdetails-alert.png)
+
 Likewise, a warning will be displayed if the user submits the form without the amount.
+
 ![Amount Alert](assets/images/amount-alert.png)
-After submitting the form, the entered data will be displayed on the screen. Example 1:
+
+After submitting the form, the entered data will be displayed on the screen. 
+Example 1:
+
 ![Expense Record Ex1](assets/images/expenserecord-example1.png)
+
 Example 2:
+
 ![Expense Record Ex2](assets/images/expenserecord-example2.png)
-A statement showing who owes what is displayed in a box at the bottom of the page. Example 1:
+
+A statement showing who owes what is displayed in a box at the bottom of the page. 
+Example 1:
+
 ![Expense Details Ex1](assets/images/balancestatement-1.png)
+
 Example 2:
+
 ![Expense Details Ex2](assets/images/balancestatement-2.png)
 
 ### The Footer
