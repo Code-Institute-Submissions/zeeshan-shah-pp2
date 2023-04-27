@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=Montserrat+Alternates:wght@500&family=Sacramento&display=swap');
 
+/* logo */
 #logo-section{
     width: 90%;
     margin: 30px auto;
@@ -9,6 +10,7 @@
     background-color: #85bb65;
 }
 
+/* logo heading*/
 #logo-section > h1{
     width: 200px;
     margin: 0 auto;
@@ -19,24 +21,29 @@
     -webkit-text-stroke: 1px black;
 }
 
+/* logo icon*/
 #logo-icon{
     width: 80px;
 }
 
+/* add icon */
 #addicon{
     width: 50px;
 }
 
+/* add expense button */
 .addexpensebutton{
     width: 25%;
     border: none;
     background-color: white;
 }
 
+/* add expense animation */
 .addexpensebutton:hover{
     transform: scale(1.5);
 }
 
+/* welcome div */
 #welcome{
     width: 80%;
     margin: 0 auto;
@@ -46,6 +53,7 @@
     font-size: 150%;
 }
 
+/* username 1 style */
 #expenselistusername1{
     font-family: Sacramento, sans-serif;
     font-size: 150%;
@@ -53,6 +61,7 @@
     color: #FCBA04;
 }
 
+/* username 2 style */
 #expenselistusername2{
     font-family: Sacramento, sans-serif;
     font-size: 150%;
@@ -60,10 +69,12 @@
     color: #D88C9A;
 }
 
+/* balance statement */
 #resultList{
     color: red;
 }
 
+/* balance statement div */
 #result-div{
     visibility: hidden;
     border: solid;
@@ -72,6 +83,7 @@
     margin-bottom: 100px;
 }
 
+/* balance statement table */
 #result-table{
     font-family: Montserrat, sans-serif;
     table-layout: fixed;
@@ -79,10 +91,12 @@
     margin: 0 auto;
 }
 
+/* balance statement table body */
 tbody{   
     color: red;
 }
 
+/* let's start button */
 .btn-start{
     background-color: #22577A;
     border: solid;
@@ -100,11 +114,13 @@ tbody{
     text-decoration: none;
     cursor: pointer;
 }
-  
+
+/* let's start button animation */
 .btn-start:hover {
     opacity: 1;
 }
 
+/* more info button */
 .info-button{
     background-color: #FFF07C;
     border: solid;
@@ -122,11 +138,13 @@ tbody{
     text-decoration: none;
     cursor: pointer;
 }
-  
+
+/* more info button animation */
 .info-button:hover {
     opacity: 1;
 }
 
+/* screen during the window pop ups  */
 .modal-bg, .modal-bg-1, .modal-bg-2{
     position: fixed;
     width: 100%;
@@ -143,11 +161,13 @@ tbody{
     transition: opacity 0.5s;
 }
 
+/* screen gets visible */
 .bg-active, .bg-active-1, .bg-active-2{
     visibility: visible;
     opacity: 1;
 }
 
+/* username form window & expense detail form window*/
 .modal, .modal-2{
     position: relative;    
     font-family: Montserrat, sans-serif;
@@ -160,6 +180,7 @@ tbody{
     flex-direction: column;
 }
 
+/* more info window */
 .modal-1{
     position: relative;    
     font-family: Montserrat, sans-serif;
@@ -173,6 +194,7 @@ tbody{
     padding: 15px;
 }
 
+/* username form */
 #user-details{
     width: 100%;
     height: 100%;
@@ -182,18 +204,21 @@ tbody{
     flex-direction: column;
 }
 
+/* payment reason */
 .details{
     font-family: Montserrat, sans-serif;
     font-size: 70%;
     color: black;
 }
 
+/* timestamp */
 .timestamp{
     font-family: Arial, sans-serif;
     font-size: 30%;
     color: #016FB9;
 }
 
+/* more info div */
 #more-info{
     width: 100%;
     height: 100%;
@@ -204,6 +229,7 @@ tbody{
     flex-direction: column;
 }
 
+/* window close when icon (x) is clicked */
 .modal-close, .modal-close-1, .modal-close-2{
     position: absolute;
     top: 10px;
@@ -212,6 +238,7 @@ tbody{
     cursor: pointer;
 }
 
+/* expense div */
 #expense-div{
     visibility: hidden;    
     width: 80%;
@@ -220,6 +247,7 @@ tbody{
     margin-top: 20%;
 }
 
+/* expense div visible */
 #expense-div-active{
     visibility: visible;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -231,6 +259,7 @@ tbody{
     margin-bottom: 8%;
 }
 
+/* expense form */
 #expense-details{
     width: 100%;
     height: 100%;
@@ -240,6 +269,7 @@ tbody{
     flex-direction: column;
 }
 
+/* footer */
 footer{
     width: 100%;
     position: fixed;
@@ -260,8 +290,7 @@ footer{
     }
     
     .addexpensebutton{
-        width: 25%;
-        
+        width: 25%; 
     }
 
     #more-info{
@@ -286,13 +315,11 @@ footer{
     }
 
     #addicon{
-        width: 40px;
-        
+        width: 40px; 
     }
     
     .addexpensebutton{
         width: 35%;
-        
     }
 
     #result-table {
