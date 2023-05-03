@@ -133,7 +133,6 @@ function expenseDetailsHandleSubmit(event) {
     } else {
         alert('Please give correct amount!');
     }
-
 }
 
 /**
@@ -200,7 +199,6 @@ function balanceStatement() {
         tbodycell[0].innerHTML = `${username2}`;   
         tbodycell[1].innerHTML = `owes`;   
         tbodycell[2].innerHTML = `$${amountdiff}`;  
-       
     } else if (username1TotalAmount < username2TotalAmount){
         let amountdiff = ((username2TotalAmount - username1TotalAmount)/2).toFixed(2);
         let tbodycell = table.getElementsByTagName('tbody')[0].rows[0].cells;
