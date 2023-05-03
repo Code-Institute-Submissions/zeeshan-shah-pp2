@@ -46,8 +46,6 @@ A live version of the project can be found here:
 
 ### User Stories
 
-#### Users
-
 * Add my name and the name of my friend/flatmate.
 * Add the reason of the payment.
 * Add amount that has been paid.
@@ -177,7 +175,11 @@ The footer is fixed on the screen. There is a disclaimer that the site is for ed
 
 ## Testing
 
-Testing continued throughout the development of the site. During development I used Google developement tool to make sure everything was working properly and to help troubleshoot when things weren't working as expected. The console also played an important role in finding the errors in my JavaScript.
+Testing continued throughout the development of the site. During development I used Google developement tool to make sure everything was working properly and to help troubleshoot when things weren't working as expected. I used console log for finding errors in my JavaScript code. I gave multiple values into the variables to confirm the output. I gave some invalid inputs to confirm if the application pop ups the alert message.
+
+There were an error shown by the wave contrast checker, however I didn't change it due to the design requirement and error was not a major one which didnt require a must change. 
+
+I used Word and Grammarly for the spelling check.
 
 I ensure through chrome development tool that my website is responsive on a variety of different screen sizes and devices.
 
