@@ -175,11 +175,11 @@ The footer is fixed on the screen. There is a disclaimer that the site is for ed
 
 ## Testing
 
-Testing continued throughout the development of the site. During development I used Google developement tool to make sure everything was working properly and to help troubleshoot when things weren't working as expected. I used console log for finding errors in my JavaScript code. I gave multiple values into the variables to confirm the output. I gave some invalid inputs to confirm if the application pop ups the alert message.
+Testing continued throughout the development of the site. During development I used Google developement tool to make sure everything was working properly and to help troubleshoot when things weren't working as expected. I used the console log to find errors in my JavaScript code. I entered several values into the variables to confirm the output. I entered some invalid input to confirm if the application shows the warning message.
 
-There were an error shown by the wave contrast checker, however I didn't change it due to the design requirement and error was not a major one which didnt require a must change. 
+There was an error displayed by the wave contrast checker, but I didn't change the colors due to design requirements, and the error was not a fatal error that did not require a change.
 
-I used Word and Grammarly for the spelling check.
+I used Word and Grammarly for spell checking.
 
 I ensure through chrome development tool that my website is responsive on a variety of different screen sizes and devices.
 
